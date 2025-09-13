@@ -343,14 +343,14 @@
             transform: scale(1.03);
         }
 
-        /* History Section */
-        .history-section {
+        /* Founder Section */
+        .founder-section {
             background: #f8f9fa;
             position: relative;
             overflow: hidden;
         }
 
-        .history-section::before {
+        .founder-section::before {
             content: '';
             position: absolute;
             top: -100px;
@@ -363,108 +363,74 @@
             z-index: 0;
         }
 
-        .timeline {
+        .founder-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
             position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 0;
+            z-index: 1;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--primary);
-            transform: translateX(-50%);
+        .founder-image {
+            flex: 1;
+            text-align: center;
         }
 
-        .timeline-item {
-            width: 50%;
-            padding: 20px 40px;
-            position: relative;
+        .founder-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
 
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            text-align: right;
-            padding-right: 60px;
+        .founder-image:hover img {
+            transform: scale(1.03);
         }
 
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 60px;
+        .founder-info {
+            flex: 1;
         }
 
-        .timeline-content {
+        .founder-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .founder-role {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .founder-description {
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .founder-quote {
             background: white;
             padding: 30px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
+            border-left: 4px solid var(--secondary);
+            margin-top: 30px;
         }
 
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
-
-        .timeline-content::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: white;
-            transform: rotate(45deg);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::after {
-            right: -10px;
-            top: calc(50% - 10px);
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::after {
-            left: -10px;
-            top: calc(50% - 10px);
-        }
-
-        .timeline-year {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .timeline-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+        .founder-quote p {
+            font-style: italic;
             color: var(--dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
         }
 
-        .timeline-content p {
-            color: var(--gray);
-            line-height: 1.7;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background: var(--secondary);
-            border-radius: 50%;
-            top: calc(50% - 12px);
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px var(--secondary);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -52px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -52px;
+        .founder-quote .author {
+            font-weight: 600;
+            color: var(--primary);
         }
 
         /* Vision Mission Section */
@@ -644,159 +610,6 @@
             line-height: 1.7;
         }
 
-        /* Team Section */
-        .team-section {
-            background: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-section::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            opacity: 0.05;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .team-card {
-            background: white;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-            position: relative;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .team-image {
-            height: 280px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .team-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .team-card:hover .team-image img {
-            transform: scale(1.1);
-        }
-
-        .team-info {
-            padding: 25px;
-        }
-
-        .team-info h3 {
-            margin-bottom: 8px;
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .team-role {
-            color: var(--secondary);
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
-        .team-desc {
-            color: var(--gray);
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .team-social {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .team-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #f5f9ff;
-            border-radius: 50%;
-            transition: var(--transition);
-            color: var(--primary);
-        }
-
-        .team-social a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Clients Section */
-        .clients-section {
-            background: #f8f9fa;
-            position: relative;
-        }
-
-        .clients-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 35px;
-            align-items: center;
-        }
-
-        .client-item {
-            background: white;
-            padding: 25px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .client-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .client-item img {
-            max-width: 100%;
-            max-height: 70px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: var(--transition);
-        }
-
-        .client-item:hover img {
-            filter: grayscale(0);
-            opacity: 1;
-        }
-
         /* CTA Section */
         .cta-section {
             background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
@@ -947,35 +760,13 @@
                 margin-top: 40px;
             }
             
-            .timeline::before {
-                left: 30px;
+            .founder-container {
+                flex-direction: column;
+                text-align: center;
             }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 20px;
-                text-align: left;
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                left: 0;
-                padding-right: 20px;
-                padding-left: 70px;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content::after,
-            .timeline-item:nth-child(even) .timeline-content::after {
-                left: -10px;
-                right: auto;
-                top: calc(50% - 10px);
-            }
-
-            .timeline-item:nth-child(odd) .timeline-dot,
-            .timeline-item:nth-child(even) .timeline-dot {
-                left: 20px;
-                right: auto;
+            
+            .founder-image {
+                margin-bottom: 40px;
             }
         }
 
@@ -1067,17 +858,11 @@
                 font-size: 2.2rem;
             }
             
-            .vm-card, .value-card, .team-card {
+            .vm-card, .value-card {
                 padding: 30px 20px;
             }
             
-            .clients-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .client-item {
-                height: 120px;
+            .founder-quote {
                 padding: 20px;
             }
             
@@ -1150,7 +935,7 @@
                     <p>PT Otomasi Solusi Indonesia adalah perusahaan yang berfokus pada penyediaan solusi industrial automation terintegrasi, material industri berkualitas, serta layanan machining presisi. Kami hadir untuk membantu dunia industri meningkatkan efisiensi, produktivitas, dan keandalan operasional melalui penerapan teknologi otomasi yang tepat.</p>
                     <p>Kami percaya bahwa otomasi bukan sekadar menghadirkan mesin atau perangkat, melainkan menghadirkan sistem yang mampu menyelaraskan kecepatan, akurasi, dan konsistensi dalam setiap proses produksi. Oleh karena itu, setiap solusi yang kami tawarkan selalu dirancang untuk menjawab kebutuhan spesifik klien, mulai dari optimalisasi lini produksi, peningkatan kualitas output, hingga pengurangan biaya operasional.</p>
                     <p>Didukung oleh tim engineering yang berpengalaman dan pemahaman mendalam terhadap kebutuhan industri di Indonesia, kami siap memberikan layanan yang menyeluruh—mulai dari konsultasi, perancangan, penyediaan material, implementasi, hingga dukungan purna jual.</p>
-                    <p>Komitmen kami sederhana: menjadi mitra strategis yang membantu perusahaan Anda bertransformasi menuju sistem industri yang lebih modern, efisien, dan berdaya saing tinggi melalui otomasi.</p>
+                    <p>Komitmen kami sederhana: menjadi mitra strategis yang membantu perusahaan Anda bertransformasi menuju sistem industri yang lebih modern, efisien, и berdaya saing tinggi melalui otomasi.</p>
                     <a href="Produk2.html" class="btn">Jelajahi Layanan Kami</a>
                 </div>
                 <div class="about-image">
@@ -1160,59 +945,35 @@
         </div>
     </section>
 
-    <!-- History Section -->
-    <!-- <section class="section history-section">
+    <!-- Founder Section -->
+    <section class="section founder-section">
         <div class="container">
-            <h2 class="section-title">Sejarah <span>Perusahaan</span></h2>
+            <h2 class="section-title">Pendiri & <span>Direktur Utama</span></h2>
             
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2005</div>
-                        <h3>Pendirian Perusahaan</h3>
-                        <p>PT Otomasi Solusi Indonesia didirikan dengan fokus pada penyediaan material industri dan jasa machining presisi untuk sektor manufaktur.</p>
-                    </div>
-                </div>
+            <div class="founder-container">
+                <!-- <div class="founder-image">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Budi Santoso - Pendiri & Direktur Utama">
+                </div> -->
                 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2010</div>
-                        <h3>Ekspansi Layanan</h3>
-                        <p>Memperluas layanan ke bidang transportation dan logistik industri untuk mendukung distribusi produk yang efisien dan tepat waktu.</p>
+                <div class="founder-info">
+                    <h2>Nur Laili F.</h2>
+                    <div class="founder-role">Pendiri & Direktur Utama</div>
+                    
+                    <div class="founder-description">
+                        <p>Nur Laili F., pendiri sekaligus Direktur Utama PT Otomasi Solusi Indonesia, memiliki visi untuk mentransformasi industri nasional melalui penerapan teknologi otomasi yang tepat. Di bawah kepemimpinannya, perusahaan terus berkembang menjadi mitra terpercaya dalam penyediaan material industri, jasa machining presisi, dan solusi otomasi terintegrasi.</p>
+                        
+                        <p>Komitmen beliau terhadap inovasi, kualitas, dan kemitraan jangka panjang menjadi fondasi utama dalam mendukung keberlanjutan serta daya saing industri di Indonesia.</p>
+                        
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2015</div>
-                        <h3>Modernisasi Fasilitas</h3>
-                        <p>Menginvestasikan teknologi CNC machining terbaru dan sistem manajemen kualitas untuk meningkatkan kapasitas dan presisi produksi.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2020</div>
-                        <h3>Sertifikasi Internasional</h3>
-                        <p>Mendapatkan sertifikasi ISO 9001:2015 untuk sistem manajemen kualitas yang diakui secara internasional.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
-                        <h3>Ekspansi Pasar</h3>
-                        <p>Memperluas jangkauan pasar ke seluruh Indonesia dan mulai mengekspor produk serta layanan ke negara-negara ASEAN.</p>
+                    
+                    <div class="founder-quote">
+                        <p>"Kami percaya bahwa masa depan industri Indonesia terletak pada adopsi teknologi otomasi yang smart dan sustainable. Melalui solusi yang kami tawarkan, kami berkomitmen untuk membantu perusahaan-perusahaan Indonesia menjadi lebih kompetitif di kancah global."</p>
+                        <p class="author">- Nur Laili F., Pendiri & Direktur Utama</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Vision Mission Section -->
     <section class="section vision-mission">
@@ -1234,11 +995,11 @@
                     </div>
                     <h3>Misi</h3>
                     <ul>
-                        <li>Menyediakan material industri berkualitas tinggi dengan standar internasional dan harga kompetitif</li>
-                        <li>Memberikan layanan machining presisi dan jasa pendukung industri yang unggul dan terpercaya</li>
-                        <li>Mengembangkan solusi inovatif yang menjawab tantangan industri masa kini dan masa depan</li>
-                        <li>Membangun kemitraan jangka panjang yang saling menguntungkan dengan pelanggan dan pemasok</li>
-                        <li>Berkontribusi aktif dalam memajukan industri nasional melalui praktik bisnis berkelanjutan</li>
+                        <li>Menyediakan material industri berkualitas tinggi dengan standar internasional</li>
+                        <li>Memberikan layanan machining presisi dan jasa pendukung industri yang unggul</li>
+                        <li>Mengembangkan solusi inovatif untuk menjawab tantangan industri</li>
+                        <li>Membangun kemitraan jangka panjang dengan pelanggan dan pemasok</li>
+                        <li>Berkontribusi aktif dalam memajukan industri nasional</li>
                     </ul>
                 </div>
                 
@@ -1248,11 +1009,11 @@
                     </div>
                     <h3>Nilai Inti</h3>
                     <ul>
-                        <li>Integritas dalam semua aspek bisnis dan hubungan dengan stakeholders</li>
+                        <li>Integritas dalam semua aspek bisnis</li>
                         <li>Inovasi terus-menerus dalam pengembangan produk dan layanan</li>
-                        <li>Kualitas terbaik yang memenuhi dan melampaui standar internasional</li>
+                        <li>Kualitas terbaik yang memenuhi standar internasional</li>
                         <li>Komitmen terhadap kepuasan dan kesuksesan pelanggan</li>
-                        <li>Tanggung jawab sosial dan lingkungan dalam setiap operasional</li>
+                        <li>Tanggung jawab sosial dan lingkungan</li>
                     </ul>
                 </div>
             </div>
@@ -1300,107 +1061,6 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="section team-section">
-        <div class="container">
-            <h2 class="section-title">Tim <span>Kami</span></h2>
-            
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Direktur Utama">
-                    </div>
-                    <div class="team-info">
-                        <h3>Budi Santoso</h3>
-                        <div class="team-role">Direktur Utama</div>
-                        <p class="team-desc">Memimpin perusahaan dengan visi yang jelas dan pengalaman lebih dari 20 tahun di industri manufacturing dan supply chain management.</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Manager Produksi">
-                    </div>
-                    <div class="team-info">
-                        <h3>Dewi Rahayu</h3>
-                        <div class="team-role">Manager Produksi</div>
-                        <p class="team-desc">Ahli dalam mengelola proses produksi dan memastikan kualitas output sesuai standar tertinggi dengan efisiensi optimal.</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Head of Engineering">
-                    </div>
-                    <div class="team-info">
-                        <h3>Joko Prasetyo</h3>
-                        <div class="team-role">Head of Engineering</div>
-                        <p class="team-desc">Bertanggung jawab atas desain teknik dan pengembangan produk inovatif untuk memenuhi kebutuhan pasar yang terus berkembang.</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sales Manager">
-                    </div>
-                    <div class="team-info">
-                        <h3>Rina Wijaya</h3>
-                        <div class="team-role">Sales Manager</div>
-                        <p class="team-desc">Mengelola hubungan dengan klien dan mengembangkan strategi penjualan untuk pertumbuhan perusahaan yang berkelanjutan.</p>
-                        <div class="team-social">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section class="section clients-section">
-        <div class="container">
-            <h2 class="section-title">Klien <span>Kami</span></h2>
-            
-            <div class="clients-grid">
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/2c3e50/ffffff?text=Client+1" alt="Client 1">
-                </div>
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/3498db/ffffff?text=Client+2" alt="Client 2">
-                </div>
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/e74c3c/ffffff?text=Client+3" alt="Client 3">
-                </div>
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/27ae60/ffffff?text=Client+4" alt="Client 4">
-                </div>
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/2c3e50/ffffff?text=Client+5" alt="Client 5">
-                </div>
-                <div class="client-item">
-                    <img src="https://via.placeholder.com/150x80/3498db/ffffff?text=Client+6" alt="Client 6">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -1418,7 +1078,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>PT Otomasi Solusi Indonesia</h3>
-                    <p>Sebagai mitra terpercaya di industri Indonesia, kami menyediakan solusi terintegrasi berupa material industri berkualitas tinggi dan jasa machining presisi. Dengan komitmen terhadap keunggulan, inovasi, dan kepuasan pelanggan, kami siap mendukung kesuksesan operasional industri Anda.</p>
+                    <p>Sebagai mitra terpercaya di industri Indonesia, kami menyediakan solusi terintegrasi berupa material industri berkualitas tinggi dan jasa machining presisi.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1431,7 +1091,7 @@
                     <h3>Tautan Cepat</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Beranda</a></li>
-                        <li><a href="TentangKami.html">Tentang Kami</a></li>
+                        <li><a href="aboutus.html">Tentang Kami</a></li>
                         <li><a href="product.html">Produk</a></li>
                         <li><a href="services.html">Jasa</a></li>
                         <li><a href="contact.html">Kontak</a></li>
@@ -1450,10 +1110,10 @@
                 <div class="footer-column">
                     <!-- <h3>Kontak</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Jl. Industri Raya No. 123, Kawasan Industri Modern, Jakarta Utara, Indonesia 14350</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jl. Industri Raya No. 123, Jakarta</li>
                         <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
                         <li><i class="fas fa-envelope"></i> info@otomasisolusi.co.id</li>
-                        <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00 WIB</li>
+                        <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
                     </ul> -->
                 </div>
             </div>
@@ -1529,7 +1189,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.timeline-content, .vm-card, .value-card, .team-card, .client-item').forEach(el => {
+        document.querySelectorAll('.vm-card, .value-card, .founder-container').forEach(el => {
             observer.observe(el);
         });
 
