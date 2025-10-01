@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PT Otomasi Solusi Indonesia - Penyedia solusi industrial automation terintegrasi, material industri berkualitas, dan layanan machining presisi">
+    <meta name="keywords" content="otomasi industri, solusi industri, material industri, machining presisi, automation Indonesia">
+    <title>Tentang Kami - PT Otomasi Solusi Indonesia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #6c757d;
+            --success: #27ae60;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            background: var(--gradient);
+            color: white;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
+        }
+
+        .btn:hover:before {
+            opacity: 1;
+        }
+
+        .btn i {
+            margin-left: 10px;
+            transition: var(--transition);
+        }
+
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            font-size: 2.8rem;
+            color: var(--dark);
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: var(--gradient);
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .section-title span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            padding: 5px 0;
+        }
+
+        header.scrolled {
+            padding: 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 12px;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: rotate(5deg);
+        }
+
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            padding: 12px 18px;
+            display: block;
+            border-radius: var(--radius);
+            font-size: 1.05rem;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a:hover:after {
+            width: 70%;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: var(--transition);
+            z-index: 100;
+            padding: 10px 0;
+        }
+
+        .dropdown li {
+            padding: 0;
+        }
+
+        .dropdown a {
+            padding: 12px 20px;
+            display: block;
+            border-bottom: none;
+            font-size: 1rem;
+        }
+
+        .dropdown a:hover {
+            background: #f5f9ff;
+            color: var(--secondary);
+            padding-left: 25px;
+        }
+
+        .dropdown a:after {
+            display: none;
+        }
+
+        .nav-links li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--primary);
+            z-index: 1001;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            padding: 130px 0 30px;
+            background: linear-gradient(90deg, #f8f9fa 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .breadcrumb:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(52, 152, 219, 0.03)"/></svg>');
+            background-size: cover;
+        }
+
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: var(--gray);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .about-hero:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(to top, var(--light), transparent);
+            z-index: 1;
+        }
+
+        .about-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .about-hero .btn {
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        /* ===== ABOUT CONTENT SECTION ===== */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.6rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .about-text h2 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .about-text ul {
+            margin-bottom: 30px;
+        }
+
+        .about-text li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .about-text li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-text li:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--secondary);
+            border-radius: var(--radius);
+            z-index: -1;
+            opacity: 0.3;
+            transition: var(--transition);
+        }
+
+        .about-image:hover:before {
+            top: 0;
+            right: 0;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            transform: rotate(2deg);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03) rotate(0);
+        }
+
+        /* ===== FOUNDER SECTION ===== */
+        .founder-section {
+            background: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-section:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            opacity: 0.05;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .founder-section:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 250px;
+            height: 250px;
+            background: var(--primary);
+            opacity: 0.05;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .founder-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .founder-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .founder-image:before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary);
+            border-radius: var(--radius);
+            z-index: -1;
+            opacity: 0.2;
+            transition: var(--transition);
+        }
+
+        .founder-image:hover:before {
+            bottom: 0;
+            left: 0;
+        }
+
+        .founder-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            transform: rotate(-2deg);
+        }
+
+        .founder-image:hover img {
+            transform: scale(1.03) rotate(0);
+        }
+
+        .founder-info {
+            flex: 1;
+        }
+
+        .founder-info h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .founder-role {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 30px;
+        }
+
+        .founder-description {
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .founder-quote {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary);
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-quote:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 5rem;
+            color: rgba(52, 152, 219, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .founder-quote p {
+            font-style: italic;
+            color: var(--dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .founder-quote .author {
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .founder-quote .author:before {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(52, 152, 219, 0.3);
+            margin-right: 15px;
+        }
+
+        /* ===== VISION MISSION SECTION ===== */
+        .vision-mission {
+            background: white;
+            position: relative;
+        }
+
+        .vm-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+        }
+
+        .vm-card {
+            background: white;
+            padding: 40px 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .vm-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .vm-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .vm-card:hover:before {
+            width: 100%;
+            opacity: 0.03;
+        }
+
+        .vm-icon {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .vm-card:hover .vm-icon {
+            transform: scale(1.1);
+            color: var(--primary);
+        }
+
+        .vm-card h3 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .vm-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .vm-card ul {
+            margin-left: 20px;
+            color: var(--gray);
+        }
+
+        .vm-card li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 10px;
+            line-height: 1.7;
+            transition: var(--transition);
+        }
+
+        .vm-card li:before {
+            content: "→";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+            transition: var(--transition);
+        }
+
+        .vm-card li:hover {
+            color: var(--primary);
+        }
+
+        .vm-card li:hover:before {
+            color: var(--primary);
+            left: -12px;
+        }
+
+        /* ===== VALUES SECTION ===== */
+        .values {
+            background: linear-gradient(rgba(249, 249, 249, 0.95), rgba(249, 249, 249, 0.95)), 
+                        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .values:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: var(--radius);
+            background: white;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .value-card:hover:before {
+            height: 100%;
+            opacity: 0.03;
+        }
+
+        .value-icon {
+            font-size: 3.2rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+        }
+
+        .value-card:hover .value-icon {
+            color: var(--primary);
+            transform: rotateY(180deg);
+        }
+
+        .value-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            color: var(--primary);
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+        }
+
+        .value-card p {
+            color: var(--gray);
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+            line-height: 1.7;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            margin-bottom: 35px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(rgba(44, 62, 80, 0.95), rgba(44, 62, 80, 0.95)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-column h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+        }
+
+        .footer-column p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+            opacity: 0.9;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 8px;
+            opacity: 1;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 1200px) {
+            .about-hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-image {
+                margin-top: 40px;
+            }
+            
+            .founder-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .founder-image {
+                margin-bottom: 40px;
+            }
+            
+            .about-text li {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0;
+                padding-top: 40px;
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+
+            .nav-links > li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                padding: 18px;
+                border-bottom: 1px solid #f1f1f1;
+                font-size: 1.1rem;
+            }
+
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: #f9f9f9;
+                display: none;
+                transition: none;
+                width: 100%;
+                text-align: left;
+            }
+
+            .dropdown.show {
+                display: block;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 50px;
+            }
+
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-hero {
+                padding: 80px 0;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .vm-card, .value-card {
+                padding: 30px 20px;
+            }
+            
+            .founder-quote {
+                padding: 20px;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-content p {
+                font-size: 1rem;
+            }
+            
+            .breadcrumb-content {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="Gambar/logoOSI.png" alt="Logo PT Otomasi Solusi Indonesia" style="height:60px;">
+                    <span>PT OTOMASI SOLUSI INDONESIA</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="aboutus.html">Tentang Kami</a></li>
+                    <li>
+                        <a href="#" onclick="return false;">Layanan <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="product.html">Produk</a></li>
+                            <li><a href="services.html">Jasa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="index.html">Beranda</a>
+                <span>></span>
+                <span>Tentang Kami</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Tentang PT Otomasi Solusi Indonesia</h1>
+                <p>Dengan fokus pada otomasi industri, kami menyediakan solusi terintegrasi yang mampu meningkatkan keandalan proses produksi dan daya saing perusahaan Anda.</p>
+                <a href="contact.html" class="btn">Hubungi Kami <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT CONTENT SECTION ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Inovator Terdepan dalam <span>Solusi Industri</span> Indonesia</h2>
+                    <p>PT Otomasi Solusi Indonesia adalah perusahaan yang berfokus pada penyediaan solusi industrial automation terintegrasi, material industri berkualitas, serta layanan machining presisi. Kami hadir untuk membantu dunia industri meningkatkan efisiensi, produktivitas, dan keandalan operasional melalui penerapan teknologi otomasi yang tepat.</p>
+                    <p>Bagi kami, otomasi bukan sekadar menghadirkan mesin atau perangkat, melainkan membangun sistem yang mampu menyelaraskan kecepatan, akurasi, dan konsistensi dalam setiap proses produksi. Karena itu, setiap solusi yang kami tawarkan selalu dirancang untuk menjawab kebutuhan spesifik klien—mulai dari optimalisasi lini produksi, peningkatan kualitas output, hingga pengurangan biaya operasional.</p>
+                    <p>Dengan pengalaman luas di berbagai sektor industri, kami menghadirkan layanan menyeluruh dari hulu ke hilir:</p>
+                    <ul>
+                        <li>Automation & Monitoring berbasis IoT, PLC, dan robotic system</li>
+                        <li>Machining & Fabrication dengan teknologi modern yang menjamin presisi dan kualitas tinggi</li>
+                        <li>Material & Chemical Supply yang lengkap untuk mendukung kebutuhan industri</li>
+                        <li>Consumable, Safety, & Factory Support yang memastikan kelancaran operasional</li>
+                        <li>Transportation & Logistics yang efisien, fleksibel, dan tepat waktu</li>
+                    </ul>
+                    <p>Didukung oleh tim engineering yang berpengalaman serta pemahaman mendalam terhadap kebutuhan industri di Indonesia, kami siap memberikan layanan menyeluruh—mulai dari konsultasi, perancangan, penyediaan material, implementasi, hingga dukungan purna jual.</p>
+                    <p>Komitmen kami sederhana: menjadi mitra strategis yang membantu perusahaan Anda bertransformasi menuju sistem industri yang lebih modern, efisien, dan berdaya saing tinggi di era digital.</p>
+                    <a href="Produk2.html" class="btn">Jelajahi Layanan Kami <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="about-image">
+                    <img src="Gambar/imgIot.png" alt="PT Otomasi Solusi Indonesia">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOUNDER SECTION ===== -->
+    <section class="section founder-section">
+        <div class="container">
+            <h2 class="section-title">Pendiri & <span>Direktur Utama</span></h2>
+            
+            <div class="founder-container">
+                <div class="founder-info">
+                    <h2>Nur Laili F.</h2>
+                    <div class="founder-role">Pendiri & Direktur Utama</div>
+                    
+                    <div class="founder-description">
+                        <p>Nur Laili F., pendiri sekaligus Direktur Utama PT Otomasi Solusi Indonesia, memiliki visi untuk mentransformasi industri nasional melalui penerapan teknologi otomasi yang tepat. Di bawah kepemimpinannya, perusahaan terus berkembang menjadi mitra terpercaya dalam penyediaan material industri, jasa machining presisi, dan solusi otomasi terintegrasi.</p>
+                        
+                        <p>Komitmen beliau terhadap inovasi, kualitas, dan kemitraan jangka panjang menjadi fondasi utama dalam mendukung keberlanjutan serta daya saing industri di Indonesia.</p>
+                        
+                    </div>
+                    
+                    <div class="founder-quote">
+                        <p>"Kami percaya bahwa masa depan industri Indonesia terletak pada adopsi teknologi otomasi yang smart dan sustainable. Melalui solusi yang kami tawarkan, kami berkomitmen untuk membantu perusahaan-perusahaan Indonesia menjadi lebih kompetitif di kancah global."</p>
+                        <p class="author">- Nur Laili F., Pendiri & Direktur Utama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISION MISSION SECTION ===== -->
+    <section class="section vision-mission">
+        <div class="container">
+            <h2 class="section-title">Visi, Misi & <span>Nilai</span> Kami</h2>
+            
+            <div class="vm-container">
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Visi</h3>
+                    <p>Menjadi perusahaan penyedia solusi industri terintegrasi terdepan di Indonesia yang inovatif, terpercaya, dan berkelanjutan, serta berkontribusi aktif dalam memajukan industri nasional.</p>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Menyediakan material industri berkualitas tinggi dengan standar internasional</li>
+                        <li>Memberikan layanan machining presisi dan jasa pendukung industri yang unggul</li>
+                        <li>Mengembangkan solusi inovatif untuk menjawab tantangan industri</li>
+                        <li>Membangun kemitraan jangka panjang dengan pelanggan dan pemasok</li>
+                        <li>Berkontribusi aktif dalam memajukan industri nasional</li>
+                    </ul>
+                </div>
+                
+                <div class="vm-card">
+                    <div class="vm-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Nilai Inti</h3>
+                    <ul>
+                        <li>Integritas dalam semua aspek bisnis</li>
+                        <li>Inovasi terus-menerus dalam pengembangan produk dan layanan</li>
+                        <li>Kualitas terbaik yang memenuhi standar internasional</li>
+                        <li>Komitmen terhadap kepuasan dan kesuksesan pelanggan</li>
+                        <li>Tanggung jawab sosial dan lingkungan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALUES SECTION ===== -->
+    <section class="section values">
+        <div class="container">
+            <h2 class="section-title">Nilai-Nilai <span>Perusahaan</span></h2>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Kualitas Terjamin</h3>
+                    <p>Setiap produk melalui proses quality control ketat dengan standar internasional, memastikan keandalan dan performa optimal untuk operasional industri Anda.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Harga Kompetitif</h3>
+                    <p>Menawarkan nilai terbaik dengan harga yang kompetitif, memastikan efisiensi biaya tanpa mengorbankan kualitas dan keandalan produk.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Tim Profesional</h3>
+                    <p>Didukung oleh tenaga ahli berpengalaman yang siap memberikan solusi teknis terbaik dan konsultasi yang mendalam untuk kebutuhan spesifik industri Anda.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Layanan Prima</h3>
+                    <p>Komitmen terhadap kepuasan pelanggan dengan layanan responsif, solusi tepat waktu, dan dukungan purna jual yang komprehensif dan terpercaya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Tertarik Bekerja Sama Dengan Kami?</h2>
+                <p>Kami siap menjadi mitra terpercaya untuk memenuhi kebutuhan industri Anda dengan produk dan layanan berkualitas tinggi yang didukung oleh tim profesional.</p>
+                <a href="contact.html" class="btn">Hubungi Kami Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PT Otomasi Solusi Indonesia</h3>
+                    <p>Sebagai mitra terpercaya di industri Indonesia, kami menyediakan solusi terintegrasi berupa material industri berkualitas tinggi dan jasa machining presisi.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="aboutus.html">Tentang Kami</a></li>
+                        <li><a href="product.html">Produk</a></li>
+                        <li><a href="services.html">Jasa</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Layanan Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="product.html">Material Industri</a></li>
+                        <li><a href="product.html">Produk Consumable</a></li>
+                        <li><a href="product.html">Bahan Kimia Industri</a></li>
+                        <li><a href="services.html">Jasa Machining</a></li>
+                        <li><a href="services.html">Layanan Transportasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Industri Raya No. 123, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> +62 21 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> info@otomasisolusi.co.id</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PT Otomasi Solusi Indonesia. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Toggle mobile navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('header');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-links > li > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    const dropdown = this.nextElementSibling;
+                    if (dropdown && dropdown.classList.contains('dropdown')) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('show');
+                    }
+                }
+            });
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && !link.nextElementSibling) {
+                    navLinks.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    // Hide all dropdowns
+                    document.querySelectorAll('.dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('show');
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.vm-card, .value-card, .founder-container, .about-content, .vm-container, .values-grid').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation class to elements on load
+            const elementsToAnimate = document.querySelectorAll('.about-hero h1, .about-hero p, .about-hero .btn');
+            elementsToAnimate.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
